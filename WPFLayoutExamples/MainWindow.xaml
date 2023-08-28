@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPFLayoutExamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF Layout Examples" Height="400" Width="600">
+
+    <StackPanel>
+        <!-- Пример компоновки с использованием StackPanel -->
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Button Content="Кнопка 1"/>
+            <Button Content="Кнопка 2"/>
+        </StackPanel>
+
+        <!-- Пример компоновки с использованием Grid -->
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Content="Кнопка A" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="Кнопка B" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Пример компоновки с использованием DockPanel -->
+        <DockPanel Margin="10">
+            <Button DockPanel.Dock="Top" Content="Вверх" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <Button DockPanel.Dock="Bottom" Content="Вниз" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+            <Button DockPanel.Dock="Left" Content="Слева" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+            <Button DockPanel.Dock="Right" Content="Справа" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
+            <Button Content="Центр" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </DockPanel>
+    </StackPanel>
+</Window>
